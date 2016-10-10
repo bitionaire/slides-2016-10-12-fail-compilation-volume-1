@@ -1,0 +1,40 @@
+@import "../template/mixins";
+@import "../template/settings";
+
+ul.no-bullets {
+  list-style: none !important;
+
+  &.horizontal li {
+      display: inline;
+      list-style-type: none;
+      padding-right: .25em;
+  }
+}
+
+span.math-char {
+  font-size: 1.5em;
+  color: $selectionBackgroundColor;
+}
+
+.reveal a {
+  color: $selectionBackgroundColor !important;
+}
+
+p.quote-source {
+  font-size: .5em;
+  font-style: italic;
+}
+
+p.code-source {
+  &::before {
+    content: "Source: ";
+    color: darken($mainColor, 40%);
+  }
+
+  font-size: .5em;
+  font-style: italic;
+}
+
+span.darker {
+  color: darken($mainColor, 20%);
+}

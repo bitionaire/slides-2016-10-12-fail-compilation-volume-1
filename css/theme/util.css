@@ -1,0 +1,27 @@
+ul.no-bullets {
+  list-style: none !important; }
+  ul.no-bullets.horizontal li {
+    display: inline;
+    list-style-type: none;
+    padding-right: .25em; }
+
+span.math-char {
+  font-size: 1.5em;
+  color: #FF5E99; }
+
+.reveal a {
+  color: #FF5E99 !important; }
+
+p.quote-source {
+  font-size: .5em;
+  font-style: italic; }
+
+p.code-source {
+  font-size: .5em;
+  font-style: italic; }
+  p.code-source::before {
+    content: "Source: ";
+    color: #888888; }
+
+span.darker {
+  color: #bbbbbb; }

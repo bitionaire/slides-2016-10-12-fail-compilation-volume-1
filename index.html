@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Campus 2016/10/12</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css" id="theme">
+		<link rel="stylesheet" href="css/theme/util.css" >
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-video="https://www.youtube.com/watch?feature=player_detailpage&v=IETTc8on95A">
+					<h1>Fail compilation</h1>
+					<h3>Volume 1</h3>
+
+					<ul class="no-bullets horizontal" style="font-size: .5em;">
+						<li>Johann B&ouml;hler</li>
+						<li><a href="">github.com/bitionaire</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Disclaimer</h3>
+					<blockquote cite="http://www.defprogramming.com/quotes-by/jessica-gaston/">
+						&ldquo;One man's crappy software is another man's full time job.&rdquo;
+					</blockquote>
+					<p class="quote-source">Jessica Gaston</p>
+				</section>
+
+				<section>
+					<section>
+						<h1>#1</h1>
+						<h2>Hard coding</h2>
+					</section>
+
+					<section>
+						<h3>Theory of absolutivity</h3>
+						<p><span class="math-char">&forall;</span> software developer <span class="math-char">&exist;</span> hard-coded file path</p>
+						<div class="fragment">
+							<pre><code class="java" data-trim contenteditable style="font-size: 18px;">
+File output = new File("D:\\Bachelor\\IDOS\\output\\ev-gas\\");
+File input = new File("D:\\Bachelor\\IDOS\\ev-gas\\");
+							</code></pre>
+						<p class="code-source">Bachelor thesis, 2012</p>
+						</div>
+					</section>
+
+					<section>
+						<h3>One time thing? Sure &hellip;</h3>
+						<pre><code class="java" data-trim contenteditable style="font-size: 8px; line-height: 9px">
+writer.write("&lt;!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"&gt;");
+writer.write("&lt;html xmlns=\"http://www.w3.org/1999/xhtml\"/&gt;");
+writer.write("&lt;head&gt;");
+writer.write("&lt;link type=\"text/css\" rel=\"stylesheet\" href=\"/javax.faces.resource/theme.css.xhtml?ln=primefaces-ngv\"&gt;");
+writer.write("&lt;link type=\"text/css\" rel=\"stylesheet\" href=\"/javax.faces.resource/main.css.xhtml?ln=css\"&gt;");
+writer.write("&lt;link type=\"text/css\" rel=\"stylesheet\" href=\"/javax.faces.resource/primefaces.css.xhtml?ln=primefaces&amp;v=5.0\"&gt;");
+writer.write("&lt;link type=\"text/css\" rel=\"stylesheet\" href=\"/javax.faces.resource/watermark/watermark.css.xhtml?ln=primefaces&amp;v=5.0\"&gt;");
+writer.write("&lt;script type=\"text/javascript\" src=\"/javax.faces.resource/watermark/watermark.js.xhtml?ln=primefaces&amp;v=5.0\"&gt;&lt;/script&gt;");
+writer.write("&lt;script type=\"text/javascript\" src=\"/javax.faces.resource/jquery/jquery.js.xhtml?ln=primefaces&amp;v=5.0\"&gt;&lt;/script&gt;");
+writer.write("&lt;script type=\"text/javascript\" src=\"/javax.faces.resource/primefaces.js.xhtml?ln=primefaces&amp;v=5.0\"&gt;&lt;/script&gt;");
+writer.write("&lt;script type=\"text/javascript\" src=\"/javax.faces.resource/validation/beanvalidation.js.xhtml?ln=primefaces&amp;v=5.0\"&gt;&lt;/script&gt;");
+writer.write("&lt;script type=\"text/javascript\" src=\"/javax.faces.resource/validation/validation.js.xhtml?ln=primefaces&amp;v=5.0\"&gt;&lt;/script&gt;");
+writer.write("&lt;script type=\"text/javascript\" src=\"/javax.faces.resource/toggleNavigation.js.xhtml?ln=js\"&gt;&lt;/script&gt;");
+writer.write("&lt;style type=\"text/css\"&gt;&lt;/style&gt;&lt;script type=\"text/javascript\" src=\"/javax.faces.resource/jquery/jquery-plugins.js.xhtml?ln=primefaces&amp;v=5.0\"&gt;&lt;/script&gt;");
+writer.write("&lt;title&gt;Awesome software&lt;/title&gt;&lt;/head&gt;");
+writer.write("&lt;link rel=\"shortcut icon\" type=\"image/png\" href=\"/resources/img/ico.png\"&gt;&lt;/head&gt;");
+writer.write("&lt;body&gt;");
+						</code></pre>
+						<p class="code-source">Internal project, 2013</p>
+					</section>
+
+					<section>
+						<h3>Cover your tracks</h3>
+						<pre><code class="java" data-trim contenteditable style="font-size: 18px;">
+/**
+ * @author <a href="mailto:...">Johann B&Atilde;&para;hler</a>
+ */
+					</code></pre>
+						<p class="code-source">Bachelor thesis, 2012</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>#2</h1>
+						<h2>Over confidence</h2>
+					</section>
+
+					<section>
+						<img src="lib/img/wecandoit.jpg" class="stretch" />
+					</section>
+
+					<section>
+						<h3>1 typo fix</h3>
+						<ul>
+							<li class="fragment"><i>Unit Tests?</i> <span class="fragment">Nah &hellip;</span></li>
+							<li class="fragment"><i>QA deployment?</i> <span class="fragment">Waste of time</span></li>
+						</ul>
+					</section>
+
+					<section>
+						<img src="lib/img/inproduction.jpg"/>
+						<h3 class="fragment"><span class="math-char">6</span> wasted hours</h3>
+					</section>
+
+					<section>
+						<h3>Refactor</h3>
+						<p><span class="darker">Mission:</span> Rewrite of 20.000 LOC</p>
+					</section>
+
+					<section>
+						<h3>What can possibly go wrong?</h3>
+						<img src="lib/img/tooeasy.gif" />
+					</section>
+
+					<section>
+						<ul>
+							<li>1 release in 1 month</li>
+							<li class="fragment">LOC reduced to ~2.000</li>
+							<li class="fragment" style="font-size: .5em;">Should I even bother mentioning that there weren't any existing tests?</li>
+							<li class="fragment">
+								3 months of cleaning up
+								<ul class="fragment">Fixing bugs</ul>
+								<ul class="fragment"><span class="math-char">Re-</span>adding use-cases</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<ul class="no-bullets">
+							<li>
+								Many low test coverage percentage projects
+								<ol type="a" style="list-style-type: lower-latin;">
+									<li class="fragment">Testing is hard</li>
+									<li class="fragment">Testing business value is even harder</li>
+								</ol>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>#3</h1>
+						<h2>Reinventing the wheel</h2>
+					</section>
+
+					<section>
+						<img src="lib/img/wheel.png"/>
+					</section>
+
+					<section>
+						<h3>My expression language</h3>
+						<pre><code class="java" data-trim contenteditable style="font-size: 18px;">
+public static String getName(String name) {
+	return name.replace("${host}", this.id)
+		   .replace("${task}", this.taskAndType.taskId)
+		   .replace("${type}", this.taskAndType.type);
+}
+						</code></pre>
+					<p class="code-source">Internal project, 2011</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>#4</h1>
+						<h2>Later dude</h2>
+					</section>
+
+					<section>
+						<blockquote cite="http://www.defprogramming.com/quotes-by/kyle-simpson/">
+							&ldquo;There's nothing more permanent than a temporary hack.&rdquo;
+						</blockquote>
+						<p class="quote-source">Kyle Simpson</p>
+					</section>
+
+					<section>
+						<pre><code class="java" data-trim contenteditable style="font-size: 18px;">
+// FIXME closer spec will reduce startup time
+// ".*/[^/]*servlet-api-[^/]*\\.jar$|.*jstl.*\\.jar$|.*/.*taglibs.*\\.jar$"
+webapp.setAttribute(JETTY_INCLUDE, ".*\\.jar$");
+						</code></pre>
+						<p class="code-source">Internal project, 2016</p>
+						<img src="lib/img/maybe.gif" />
+					</section>
+
+					<section>
+						<pre><code class="java" data-trim contenteditable style="font-size: 18px;">
+// TODO validate application properties (mandatory options)
+						</code></pre>
+						<p class="code-source">Bachelor thesis, 2012</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>#5</h1>
+						<h2>Naming</h2>
+					</section>
+
+					<section>
+						<p>Physical unit<span class="math-char">?</span></p>
+						<img src="lib/img/britney.gif"/>
+						<p class="code-source">Internal project, 2014</p>
+					</section>
+
+					<section>
+						<pre><code class="java" data-trim contenteditable style="font-size: 18px;">
+char[] array = input.toCharArray();
+// ...
+boolean full = true;
+for (int i = array.length - 2; i >= 0; i--) {
+	if (array[i] < 'z') {
+		full = false;
+		array[i]++;
+		break;
+	} else {
+		array[i] = 'a';
+	}
+}
+						</code></pre>
+						<p class="code-source">Internal project, 2014</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Say yes</h2>
+					<img src="lib/img/yes.gif" />
+					<p>
+					<ul class="no-bullets">
+						<li class="fragment">Is it easy to understand?</li>
+						<li class="fragment">Do I recognize the use-case? (DDD)</li>
+					</ul>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h1>#6</h1>
+						<h2>To code or not to code</h2>
+					</section>
+
+					<section>
+						<p>Never start what has little to no value</p>
+						<img src="lib/img/useless.gif" />
+					</section>
+
+					<section>
+						<p>Never start what you don't expect to finish</p>
+						<img src="lib/img/elbombillo.png" style="background: #fff;" />
+					</section>
+
+					<section>
+						<p>Don't waste your time once you're way over the initial limit</p>
+						<img src="lib/img/money.gif"/>
+					</section>
+				</section>
+
+				<section>
+					<img src="lib/img/duchovny.jpg" class="stretch"/>
+					<blockquote>
+						&ldquo;I've made so many mistakes. But it is my feeling that you learn from failures, so I welcome them as often as I can.&rdquo;
+					</blockquote>
+					<p class="quote-source">David Duchovny</p>
+
+				</section>
+
+				<section>
+					<h3>Practice makes perfect</h3>
+					<img src="lib/img/practice.gif" />
+				</section>
+
+				<section>
+					<h1>Questions?</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				parallaxBackgroundImage: 'lib/img/wood2.jpg',
+				parallaxBackgroundSize: '2048px 1365px',
+				keyboard: {
+					39: 'next',
+					37: 'prev'
+				},
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
