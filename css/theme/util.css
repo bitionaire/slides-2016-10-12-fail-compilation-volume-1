@@ -25,3 +25,7 @@ p.code-source {
 
 span.darker {
   color: #bbbbbb; }
+
+.selection-color {
+  color: #FF5E99 !important;
+  font-color: #FF5E99 !important; }

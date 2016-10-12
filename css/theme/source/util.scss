@@ -38,3 +38,8 @@ p.code-source {
 span.darker {
   color: darken($mainColor, 20%);
 }
+
+.selection-color {
+  color: $selectionBackgroundColor !important;
+  font-color: $selectionBackgroundColor !important;
+}

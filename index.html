@@ -25,7 +25,7 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background-video="https://www.youtube.com/watch?feature=player_detailpage&v=IETTc8on95A">
+				<section>
 					<h1>Fail compilation</h1>
 					<h3>Volume 1</h3>
 
@@ -116,17 +116,17 @@ writer.write("&lt;body&gt;");
 
 					<section>
 						<img src="lib/img/inproduction.jpg"/>
-						<h3 class="fragment"><span class="math-char">6</span> wasted hours</h3>
+						<h3 class="fragment">= <span class="math-char">6</span> wasted hours</h3>
 					</section>
 
 					<section>
-						<h3>Refactor</h3>
+						<h3>Refactoring</h3>
 						<p><span class="darker">Mission:</span> Rewrite of 20.000 LOC</p>
 					</section>
 
 					<section>
 						<h3>What can possibly go wrong?</h3>
-						<img src="lib/img/tooeasy.gif" />
+						<img src="lib/img/tooeasy.gif" class="fragment" />
 					</section>
 
 					<section>
@@ -143,6 +143,7 @@ writer.write("&lt;body&gt;");
 					</section>
 
 					<section>
+						<h3>Testing</h3>
 						<ul class="no-bullets">
 							<li>
 								Many low test coverage percentage projects
@@ -158,34 +159,6 @@ writer.write("&lt;body&gt;");
 				<section>
 					<section>
 						<h1>#3</h1>
-						<h2>Reinventing the wheel</h2>
-					</section>
-
-					<section>
-						<img src="lib/img/wheel.png"/>
-					</section>
-
-					<section>
-						<h3>My expression language</h3>
-						<pre><code class="java" data-trim contenteditable style="font-size: 18px;">
-public static String getName(String name) {
-	return name.replace("${host}", this.id)
-		   .replace("${task}", this.taskAndType.taskId)
-		   .replace("${type}", this.taskAndType.type);
-}
-						</code></pre>
-					<p class="code-source">Internal project, 2011</p>
-					</section>
-
-					<section>
-						<h3>My template engine</h3>
-						<p class="code-source">Internal project, 2013</p>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h1>#4</h1>
 						<h2>Later dude</h2>
 					</section>
 
@@ -216,7 +189,7 @@ webapp.setAttribute(JETTY_INCLUDE, ".*\\.jar$");
 
 				<section>
 					<section>
-						<h1>#5</h1>
+						<h1>#4</h1>
 						<h2>Naming</h2>
 					</section>
 
@@ -246,21 +219,22 @@ for (int i = array.length - 2; i >= 0; i--) {
 				</section>
 
 				<section>
+					<h4>Ask yourself</h4>
 					<p>
 					<ul class="no-bullets">
 						<li>Is it easy to understand?</li>
-						<li class="fragment">Do I recognize the use-case? (DDD)</li>
+						<li class="fragment">Do I recognize the use-case?</li>
 					</ul>
 					</p>
 					<div class="fragment">
-						<h2>Say yes</h2>
+						<h2 class="selection-color">Say yes!</h2>
 						<img src="lib/img/yes.gif" />
 					</div>
 				</section>
 
 				<section>
 					<section>
-						<h1>#6</h1>
+						<h1>#5</h1>
 						<h2>To code or not to code</h2>
 					</section>
 
@@ -281,12 +255,8 @@ for (int i = array.length - 2; i >= 0; i--) {
 				</section>
 
 				<section>
-					<img src="lib/img/duchovny.jpg" class="stretch"/>
-					<blockquote>
-						&ldquo;I've made so many mistakes. But it is my feeling that you learn from failures, so I welcome them as often as I can.&rdquo;
-					</blockquote>
-					<p class="quote-source">David Duchovny</p>
-
+					<h2>The truth</h2>
+					<p class="fragment">It's not black and white</p>
 				</section>
 
 				<section>
@@ -295,7 +265,7 @@ for (int i = array.length - 2; i >= 0; i--) {
 				</section>
 
 				<section>
-					<h1>Questions?</h1>
+					<h1>THX</h1>
 				</section>
 			</div>
 		</div>
@@ -308,7 +278,7 @@ for (int i = array.length - 2; i >= 0; i--) {
 			Reveal.initialize({
 				history: true,
 
-				parallaxBackgroundImage: 'lib/img/wood2.jpg',
+				parallaxBackgroundImage: 'lib/img/dark.jpg',
 				parallaxBackgroundSize: '2048px 1365px',
 				keyboard: {
 					39: 'next',
